@@ -1,10 +1,14 @@
 <?php
 
-use App\Http\Controllers\ProductController;
+use App\Models\Wali;
+use App\Models\Siswa;
+use App\Models\Mahasiswa;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
-use App\Models\Siswa;
+use App\Http\Controllers\RelasiController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\BiodatasController;
+use App\Http\Controllers\PenggunaController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -137,7 +141,7 @@ route::get('halaman3', function (){
     return view('tampil3', compact('idola'));
 });
 
-route::get('post',[PostsController::class,'tampil']);
+// route::get('post',[PostsController::class,'tampil']);
 
 route::get('siswa',function (){
 
@@ -146,7 +150,7 @@ route::get('siswa',function (){
 
 });
 
-route::get('biodata',[BiodatasController::class,'tampil']);
+// route::get('biodata',[BiodatasController::class,'tampil']);
 
 #Menampilkan semua data
     //return $post = Post::all();
@@ -178,4 +182,28 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-route::get('product',[ProductController::class, 'index'])->name('product');
+route::get('product',[ProductController::class, 'index']);
+route::get('product/add', [ProductController::class, 'store']);
+route::get('product/update', [ProductController::class, 'update']);
+route::get('product/delete', [ProductController::class, 'destroy']);
+
+// Crud
+route::resource('post',PostsController::class);
+route::resource('biodata',BiodatasController::class);
+route::resource('pengguna',PenggunaController::class);
+
+//Route Relasi
+Route::get('/one-to-one', [RelasiController::class, 'oneToOne']);
+Route::get('/one-to-many', [RelasiController::class, 'oneToMany']);
+
+//Mini Tugas One To One
+Route::get('/wali-ke-mahasiswa', function () {
+    $wali = Wali::with('mahasiswa')->first();
+    return "{$wali->nama} adalah wali dari {$wali->mahasiswa->nama}";
+});
+
+//Mini Tugas One To Many
+Route::get('/mahasiswa-ke-dosen', function () {
+    $mhs = Mahasiswa::where('nim', '123456')->first();
+    return "{$mhs->nama} dibimbing oleh {$mhs->dosen->nama}";
+});

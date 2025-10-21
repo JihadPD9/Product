@@ -9,7 +9,7 @@ class Biodata extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['id','nama_lengkap','jenis_kelamin','tanggal_lahir','tempat_lahir','agama','alamat','telepon','email'];
+    protected $fillable = ['id','nama_lengkap','jenis_kelamin','tanggal_lahir','tempat_lahir','agama','alamat','telepon','email','foto'];
 
     public $timestamp   = true;
 }

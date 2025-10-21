@@ -23,7 +23,7 @@ class BiodatasTableSeeder extends Seeder
                 'agama'=> 'Islam',
                 'alamat'=> 'Taman Kopo Indah',
                 'telepon'=> '081282469055',
-                'email'=> 'muhammadjihad1099@gmail.com',
+                'email'=> 'jihad@gmail.com',
             ],
             [
                 'nama_lengkap'     => 'Ilman Abidullah',
@@ -33,7 +33,7 @@ class BiodatasTableSeeder extends Seeder
                 'agama'=> 'Islam',
                 'alamat'=> 'Rancamanyar',
                 'telepon'=> '081282469066',
-                'email'=> 'ilman1088@gmail.com',
+                'email'=> 'ilman@gmail.com',
             ],
             [
                 'nama_lengkap'     => 'Davin Gahisan Mustafid',
@@ -43,7 +43,7 @@ class BiodatasTableSeeder extends Seeder
                 'agama'=> 'Islam',
                 'alamat'=> 'Rancamanyar',
                 'telepon'=> '081282469077',
-                'email'=> 'davin1077@gmail.com',
+                'email'=> 'davin@gmail.com',
             ],
             [
                 'nama_lengkap'     => 'Fakhri Ibnu Nabil',
@@ -53,7 +53,7 @@ class BiodatasTableSeeder extends Seeder
                 'agama'=> 'Islam',
                 'alamat'=> 'Rancamanyar',
                 'telepon'=> '081282469088',
-                'email'=> 'fakhri1066@gmail.com',
+                'email'=> 'fakhri@gmail.com',
             ],
             [
                 'nama_lengkap'     => 'Rehan Ramadhan',
@@ -63,7 +63,7 @@ class BiodatasTableSeeder extends Seeder
                 'agama'=> 'Islam',
                 'alamat'=> 'Taman Kopo Indah',
                 'telepon'=> '081282469099',
-                'email'=> 'rehan1055@gmail.com',
+                'email'=> 'rehan@gmail.com',
             ],
             [
                 'nama_lengkap'     => 'Reyhan Azka',
@@ -73,7 +73,7 @@ class BiodatasTableSeeder extends Seeder
                 'agama'=> 'Islam',
                 'alamat'=> 'Jati Mekar',
                 'telepon'=> '081282469000',
-                'email'=> 'reyhan1044@gmail.com',
+                'email'=> 'reyhan@gmail.com',
             ],
             [
                 'nama_lengkap'     => 'Marsha Bara Suwarna',
@@ -83,7 +83,7 @@ class BiodatasTableSeeder extends Seeder
                 'agama'=> 'Islam',
                 'alamat'=> 'Banjaran',
                 'telepon'=> '081282469011',
-                'email'=> 'bara1033@gmail.com',
+                'email'=> 'bara@gmail.com',
             ],
             [
                 'nama_lengkap'     => 'Teguh Firmansyah',
@@ -93,7 +93,7 @@ class BiodatasTableSeeder extends Seeder
                 'agama'=> 'Islam',
                 'alamat'=> 'Rancamanyar',
                 'telepon'=> '081282469022',
-                'email'=> 'teguh1022@gmail.com',
+                'email'=> 'teguh@gmail.com',
             ],
             [
                 'nama_lengkap'     => 'Dikri Nurohman',
@@ -103,7 +103,7 @@ class BiodatasTableSeeder extends Seeder
                 'agama'=> 'Islam',
                 'alamat'=> 'Rancamanyar',
                 'telepon'=> '081282469033',
-                'email'=> 'dikri1011@gmail.com',
+                'email'=> 'dikri@gmail.com',
             ],
             [
                 'nama_lengkap'     => 'Aliva Nugraha Sajahtar',
@@ -113,7 +113,7 @@ class BiodatasTableSeeder extends Seeder
                 'agama'=> 'Islam',
                 'alamat'=> 'Rancamanyar',
                 'telepon'=> '081282469044',
-                'email'=> 'aliva1000@gmail.com',
+                'email'=> 'aliva@gmail.com',
             ],
         ]);
     }
