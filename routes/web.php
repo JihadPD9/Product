@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Hobi;
 use App\Models\Wali;
 use App\Models\Siswa;
 use App\Models\Mahasiswa;
@@ -195,6 +196,7 @@ route::resource('pengguna',PenggunaController::class);
 //Route Relasi
 Route::get('/one-to-one', [RelasiController::class, 'oneToOne']);
 Route::get('/one-to-many', [RelasiController::class, 'oneToMany']);
+Route::get('/many-to-many', [RelasiController::class, 'manyToMany']);
 
 //Mini Tugas One To One
 Route::get('/wali-ke-mahasiswa', function () {
@@ -207,3 +209,14 @@ Route::get('/mahasiswa-ke-dosen', function () {
     $mhs = Mahasiswa::where('nim', '123456')->first();
     return "{$mhs->nama} dibimbing oleh {$mhs->dosen->nama}";
 });
+
+//Mini Tugas Many To Many
+Route::get('/hobi/bola', function () {
+    $hobi = Hobi::where('nama_hobi', 'Bermain Bola')->first();
+    foreach ($hobi->mahasiswas as $mhs) {
+        echo $mhs->nama . '<br>';
+    }
+});
+
+//Tugas Akhir
+Route::get('eloquent', [RelasiController::class, 'eloquent']);
