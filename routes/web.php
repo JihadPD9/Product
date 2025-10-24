@@ -5,11 +5,17 @@ use App\Models\Wali;
 use App\Models\Siswa;
 use App\Models\Mahasiswa;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\KelasController;
+use App\Http\Controllers\MuridController;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\BarangController;
 use App\Http\Controllers\RelasiController;
+use App\Http\Controllers\PembeliController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\TeleponController;
 use App\Http\Controllers\BiodatasController;
 use App\Http\Controllers\PenggunaController;
+use App\Http\Controllers\TransaksiController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -191,7 +197,7 @@ route::get('product/delete', [ProductController::class, 'destroy']);
 // Crud
 route::resource('post',PostsController::class);
 route::resource('biodata',BiodatasController::class);
-route::resource('pengguna',PenggunaController::class);
+
 
 //Route Relasi
 Route::get('/one-to-one', [RelasiController::class, 'oneToOne']);
@@ -220,3 +226,17 @@ Route::get('/hobi/bola', function () {
 
 //Tugas Akhir
 Route::get('eloquent', [RelasiController::class, 'eloquent']);
+
+
+//Crud Relasi One To One
+route::resource('pengguna',PenggunaController::class);
+route::resource('telepon',TeleponController::class);
+
+//Crud Relasi One To Many
+route::resource('kelas',KelasController::class);
+route::resource('murid',MuridController::class);
+
+//Crud Relasi Many To Many
+route::resource('barang',BarangController::class);
+route::resource('pembeli',PembeliController::class);
+route::resource('transaksi',TransaksiController::class);
